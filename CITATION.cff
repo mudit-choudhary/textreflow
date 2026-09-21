@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "textreflow: reading order and paragraph reconstruction for document layout detectors"
+title: "Textreflow: Reading Order and Paragraph Reconstruction for Document Layout Detectors"
 message: "If you use this software, please cite it as below."
 type: software
 authors:
@@ -24,3 +24,4 @@ keywords:
 license: Apache-2.0
 version: 1.0.0
 date-released: "2026-09-21"
+doi: "10.5281/zenodo.22872013"          # concept DOI: always resolves to the latest version

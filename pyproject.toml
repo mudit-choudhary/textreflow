@@ -26,6 +26,7 @@ test = ["pytest>=7"]
 
 [project.urls]
 Homepage = "https://github.com/mudit-choudhary/textreflow"
+DOI = "https://doi.org/10.5281/zenodo.22872013"
 Evaluation = "https://github.com/mudit-choudhary/Anneal/blob/main/evals/Reports/parser_quality_60.json"
 
 [tool.setuptools.packages.find]

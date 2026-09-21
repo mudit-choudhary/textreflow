@@ -1,5 +1,6 @@
 # textreflow
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22872013.svg)](https://doi.org/10.5281/zenodo.22872013)
 [![PyPI](https://img.shields.io/pypi/v/textreflow.svg)](https://pypi.org/project/textreflow/)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
@@ -162,11 +163,13 @@ pytest -q                      # 40 tests, no network, no detector needed
 If this is useful in your work, please cite it. `CITATION.cff` in this
 repository gives GitHub's "Cite this repository" button everything it needs:
 
-> Choudhary, M. (2026). *textreflow: reading order and paragraph
-> reconstruction for document layout detectors* (version 1.0.0) [Software].
-> https://github.com/mudit-choudhary/textreflow
+> Choudhary, M. (2026). *Textreflow: Reading Order and Paragraph
+> Reconstruction for Document Layout Detectors* (version 1.0.0) [Software].
+> Zenodo. https://doi.org/10.5281/zenodo.22872013
 
-ORCID: [0009-0003-8880-0925](https://orcid.org/0009-0003-8880-0925).
+The DOI above always resolves to the newest version; cite
+[10.5281/zenodo.22872014](https://doi.org/10.5281/zenodo.22872014) for 1.0.0
+specifically. ORCID: [0009-0003-8880-0925](https://orcid.org/0009-0003-8880-0925).
 
 ## Licence
 
