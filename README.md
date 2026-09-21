@@ -1,4 +1,4 @@
-# textreflow
+# Textreflow
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22872013.svg)](https://doi.org/10.5281/zenodo.22872013)
 [![PyPI](https://img.shields.io/pypi/v/textreflow.svg)](https://pypi.org/project/textreflow/)
