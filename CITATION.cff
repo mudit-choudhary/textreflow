@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "textreflow: reading order and paragraph reconstruction for document layout detectors"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Choudhary
+    given-names: Mudit
+    orcid: "https://orcid.org/0009-0003-8880-0925"
+repository-code: "https://github.com/mudit-choudhary/textreflow"
+url: "https://github.com/mudit-choudhary/textreflow"
+abstract: >-
+  Turns the regions a layout detector finds (labelled boxes with their text
+  lines) into ordered, typed blocks: column-aware reading order, paragraphs
+  rebuilt across regions, columns and pages with document-level
+  de-hyphenation, structure kept as block types, and page furniture removed
+  from the flow. Run on Docling's own layout over 60 arXiv papers, it cuts the
+  share of paragraphs beginning mid-sentence from 12.5% (Docling's document
+  model) to 2.4%.
+keywords:
+  - document parsing
+  - reading order
+  - layout analysis
+  - retrieval-augmented generation
+license: Apache-2.0
+version: 1.0.0
+date-released: "2026-09-21"

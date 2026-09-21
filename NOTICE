@@ -1,0 +1,11 @@
+textreflow
+Copyright 2026 Mudit Choudhary <https://orcid.org/0009-0003-8880-0925>
+
+Layout regions to ordered, typed prose: column-aware reading order and
+paragraph reconstruction for any document layout detector.
+
+Developed and evaluated in the Anneal project, where it is the assembler half
+of the `recrystal` parser:
+https://github.com/mudit-choudhary/Anneal
+
+This product includes software developed by Mudit Choudhary.

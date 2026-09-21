@@ -1,0 +1,59 @@
+# Publish to PyPI on every GitHub release.
+#
+# Authentication is Trusted Publishing: GitHub signs a short-lived OIDC token
+# that PyPI verifies against the publisher configured for this repository, so
+# no API token is stored anywhere. Configure it once at
+# https://pypi.org/manage/account/publishing/ with:
+#
+#   PyPI project name : textreflow
+#   Owner             : mudit-choudhary
+#   Repository        : textreflow
+#   Workflow          : publish.yml
+#   Environment       : pypi
+name: Publish
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:        # lets you re-run it by hand if a release fails
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Build wheel and sdist
+        run: |
+          python -m pip install --upgrade build twine
+          python -m build
+          python -m twine check dist/*
+      - name: Run the tests against the built wheel
+        run: |
+          python -m pip install dist/*.whl pytest
+          python -m pytest -q
+      - uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist/
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi              # matches the publisher configured on PyPI
+    permissions:
+      id-token: write              # required: this is what signs the OIDC token
+    steps:
+      - uses: actions/download-artifact@v7
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          # PyPI versions are immutable, so re-running this workflow for a
+          # version already uploaded would fail with "file already exists".
+          # Skipping keeps a re-run harmless — the version in pyproject.toml
+          # is what decides whether anything new is published.
+          skip-existing: true
